@@ -15,7 +15,7 @@ class App extends Component {
         super(props);
         this.state = { videos : [] };
         
-        YTearch({ key : API_KEY, term : 'surfboards' }, videos => {
+        YTSearch({ key : API_KEY, term : 'surfboards' }, videos => {
             this.setState({ videos });
         });
     }
