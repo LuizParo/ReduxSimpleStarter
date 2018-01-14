@@ -2,10 +2,16 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
+import YTearch from 'youtube-api-search';
 
 import SearchBar from './components/search_bar';
 
 const API_KEY = 'AIzaSyBlrpOxVV2_zY6fJUZ4o6i9MknyExVoEUI';
+
+YTearch({
+    key : API_KEY,
+    term : 'surfboards'
+}, console.log);
 
 // Create a new component. This component should produce some HTML.
 const App = () => {
