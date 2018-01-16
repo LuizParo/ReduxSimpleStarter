@@ -2,6 +2,7 @@
 
 import React, { Component } from 'react';
 
+import BookDetail from '../containers/book-detail';
 import BookList from '../containers/book-list';
 
 export default class App extends Component {
@@ -10,6 +11,7 @@ export default class App extends Component {
         return (
             <div>
                 <BookList />
+                <BookDetail />
             </div>
         );
     }
