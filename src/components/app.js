@@ -1,9 +1,15 @@
+'use strict';
+
 import React, { Component } from 'react';
 
+import SearchBar from '../containers/search_bar';
+
 export default class App extends Component {
-  render() {
-    return (
-      <div>React simple starter</div>
-    );
-  }
+    render() {
+        return (
+            <div>
+                <SearchBar />
+            </div>
+        );
+    }
 }
