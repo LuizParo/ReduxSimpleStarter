@@ -16,8 +16,8 @@ class GoogleMaps extends Component {
         new google.maps.Map(this.refs.map, {
             zoom : 12,
             center : {
-                lat : this.props.lat,
-                lng : this.props.lng
+                lat : parseFloat(this.props.lat),
+                lng : parseFloat(this.props.lng)
             }
         });
     }
