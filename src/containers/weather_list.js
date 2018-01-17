@@ -17,15 +17,24 @@ class WeatherList extends Component {
                     </tr>
                 </thead>
                 <tbody>
-
+                    {this.props.weather.map(this.renderWeather)}
                 </tbody>
             </table>
         );
     }
+
+    renderWeather(cityData) {
+        const name = cityData.city.name;
+        return (
+            <tr key={name}>
+                <td>{name}</td>
+            </tr>
+        );
+    }
 }
 
-function mapStatetoProps({ weather }) {
+function mapStateToProps({ weather }) {
     return { weather };
 }
 
-export default connect(mapStatetoProps)(WeatherList);
+export default connect(mapStateToProps)(WeatherList);
