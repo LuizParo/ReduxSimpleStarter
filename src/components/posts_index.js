@@ -1,6 +1,9 @@
 'use strict';
 
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+
+import { fetchPosts } from '../actions';
 
 class PostsIndex extends Component {
 
@@ -9,6 +12,10 @@ class PostsIndex extends Component {
             <div>Posts index</div>
         );
     }
+
+    componentDidMount() {
+        this.props.fetchPosts();
+    }
 }
 
-export default PostsIndex;
+export default connect(null, { fetchPosts })(PostsIndex);
