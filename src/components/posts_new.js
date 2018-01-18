@@ -7,8 +7,17 @@ class PostsNew extends Component {
 
     render() {
         return (
+            <form>
+                <Field name="title"
+                    component={this.renderTitleField} />
+            </form>
+        );
+    }
+
+    renderTitleField(field) {
+        return (
             <div>
-                Posts new!
+                <input type="text" {...field.input} />
             </div>
         );
     }
