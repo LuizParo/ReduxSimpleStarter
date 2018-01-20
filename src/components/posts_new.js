@@ -9,15 +9,25 @@ class PostsNew extends Component {
         return (
             <form>
                 <Field name="title"
-                    component={this.renderTitleField} />
+                    label="Title for Post"
+                    component={this.renderField} />
+
+                <Field name="tags"
+                    label="Tags"
+                    component={this.renderField} />
+
+                <Field name="content"
+                    label="Post Content"
+                    component={this.renderField} />
             </form>
         );
     }
 
-    renderTitleField(field) {
+    renderField(field) {
         return (
-            <div>
-                <input type="text" {...field.input} />
+            <div className="form-group">
+                <label>{field.label}</label>
+                <input type="text" {...field.input} className="form-control" />
             </div>
         );
     }
