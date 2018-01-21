@@ -10,7 +10,7 @@ export default function(state = {}, action) {
             return _.mapKeys(action.payload.data, 'id');
 
         case FETCH_POST:
-            const post = actos.payload.data;
+            const post = action.payload.data;
             return { ...state, [post.id] : post };
 
         default:
